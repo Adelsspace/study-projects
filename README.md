@@ -1,5 +1,5 @@
 # Это основной репозиторий для обзора моих учебных проектов
 
-| Проекты    |                                 Репозиторий                                  |                              Live Demo |
-| ---------- | :--------------------------------------------------------------------------: | -------------------------------------: |
-| 1. forkify | right-[репозиторий]https://github.com/Adelsspace/recipes-study-project-final | $ [live demo]recipes-adel.netlify.app/ |
+| Проекты    |                               Репозиторий                                |                              Live Demo |
+| ---------- | :----------------------------------------------------------------------: | -------------------------------------: |
+| 1. forkify | [репозиторий](https://github.com/Adelsspace/recipes-study-project-final) | [live demo](recipes-adel.netlify.app/) |
