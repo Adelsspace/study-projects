@@ -12,5 +12,4 @@
 | 8. Password Generator |               [код](https://github.com/Adelsspace/study-projects/tree/master/Password%20Generator)                | [live demo](https://password-generator-adel.netlify.app/) |
 | 9. Sound board |               [код](https://github.com/Adelsspace/study-projects/tree/master/sound-board)                | [live demo](https://sound-board-adel.netlify.app) |
 | 10. Random Choice Picker  |               [код](https://github.com/Adelsspace/study-projects/tree/master/Random%20Choice%20Picker)                | [live demo](https://random-choice-picker-adel.netlify.app/) |
-| 11. Split landing page  |               [код](https://github.com/Adelsspace/study-projects/tree/master/split-landing-page)                | [live demo](https://splitlandingpage-adel.netlify.app) |
-| 12. Form input wave  |               [код](https://github.com/Adelsspace/study-projects/tree/master/form-input-wave)                | [live demo](https://forminputwave-adel.netlify.app) |
+| 11. Form input wave  |               [код](https://github.com/Adelsspace/study-projects/tree/master/form-input-wave)                | [live demo](https://forminputwave-adel.netlify.app) |
