@@ -10,7 +10,7 @@ const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
 const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
-const nav = document.querySelector('.nav')
+const nav = document.querySelector('.nav');
 
 const openModal = function (e) {
   e.preventDefault();
@@ -25,9 +25,6 @@ const closeModal = function () {
 
 btnsOpenModal.forEach(btn => btn.addEventListener('click', openModal));
 
-// for (let i = 0; i < btnsOpenModal.length; i++)
-//   btnsOpenModal[i].addEventListener('click', openModal);
-
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
 
@@ -37,139 +34,73 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-
-
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
 
-btnScrollTo.addEventListener('click', function(e){
-  const s1cords = section1.getBoundingClientRect()
-  
-
-  // window.scrollTo(s1cords.left + window.pageXOffset, s1cords.top + window.pageYOffset)
+btnScrollTo.addEventListener('click', function (e) {
+  const s1cords = section1.getBoundingClientRect();
 
   window.scrollTo({
-    // left: s1cords.left + window.pageXOffset,
-    // top: s1cords.top + window.pageYOffset,
-    // behavior: 'smooth'
-  })
+    left: s1cords.left + window.pageXOffset,
+    top: s1cords.top + window.pageYOffset,
+    behavior: 'smooth',
+  });
 
-  section1.scrollIntoView({behavior: 'smooth'})
-})
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
 
-
-// const h1 = document.querySelector('h1');
-
-
-// const alertH1 = function(e){
-//   alert('addEventListerner: greet: you are reading the heading');
-//   // h1.removeEventListener('mouseenter', alertH1)
-// }
-
-// h1.addEventListener('mouseenter', alertH1)
-
-// setTimeout(() => h1.removeEventListener('mouseenter', alertH1), 3000)
-
-// h1.onmouseenter = function(e){
-//   alert('addEventListerner: greet: you are reading the heading')
-// }s
-
-// const randomInt = (min,max) => Math.floor(Math.random() * (max - min + 1) + min)
-
-// const randomColor = () => `rgb(${randomInt(0,255)},${randomInt(0,255)},${randomInt(0,255)})`;
-// console.log(randomColor(0,255));
-
-// document.querySelectorAll('.nav__link').forEach(function(el){
-//   el.addEventListener('click', function(e){
-//     e.preventDefault();
-    
-//     const id = this.getAttribute('href');
-//     console.log(id);
-//     document.querySelector(id).scrollIntoView({behavior: 'smooth'})
-//   })
-// })
-
-document.querySelector('.nav__links').addEventListener('click', function(e){
+document.querySelector('.nav__links').addEventListener('click', function (e) {
   e.preventDefault();
 
-  if (e.target.classList.contains('nav__link')){   
+  if (e.target.classList.contains('nav__link')) {
     const id = e.target.getAttribute('href');
     console.log(id);
-    document.querySelector(id).scrollIntoView({behavior: 'smooth'})
-//   })
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+    //   })
   }
-})
+});
 
-
-// const h1 = document.querySelector('h1');
-
-// console.log(h1.querySelectorAll('.highlight'));
-
-
-
-tabsContainer.addEventListener('click', function(e){
+tabsContainer.addEventListener('click', function (e) {
   const clicked = e.target.closest('.operations__tab');
-  
-  if(!clicked) return;
 
-  tabs.forEach(t => t.classList.remove('operations__tab--active'))
-  clicked.classList.add('operations__tab--active')
+  if (!clicked) return;
 
-  tabsContent.forEach(c => c.classList.remove('operations__content--active'))
-  document.querySelector(`.operations__content--${clicked.dataset.tab}`).classList.add('operations__content--active')
-  
-})
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  clicked.classList.add('operations__tab--active');
 
-const handleHover = function(e){
-  if(e.target.classList.contains('nav__link')){
+  tabsContent.forEach(c => c.classList.remove('operations__content--active'));
+  document
+    .querySelector(`.operations__content--${clicked.dataset.tab}`)
+    .classList.add('operations__content--active');
+});
+
+const handleHover = function (e) {
+  if (e.target.classList.contains('nav__link')) {
     const link = e.target;
-    const siblings = link.closest('.nav').querySelectorAll('.nav__link')
-    const logo = link.closest('.nav').querySelector('img')
+    const siblings = link.closest('.nav').querySelectorAll('.nav__link');
+    const logo = link.closest('.nav').querySelector('img');
 
-    siblings.forEach(el =>{
-      if( el !== link) el.style.opacity = this;
+    siblings.forEach(el => {
+      if (el !== link) el.style.opacity = this;
     });
     logo.style.opacity = this;
   }
-}
+};
 
-
-
-nav.addEventListener('mouseover', handleHover.bind(0.5))
+nav.addEventListener('mouseover', handleHover.bind(0.5));
 
 nav.addEventListener('mouseout', handleHover.bind(1));
 
-
-// const initialCoords = section1.getBoundingClientRect()
-
-// window.addEventListener('scroll', function(e){
-//   if (window.scrollY > initialCoords.top) nav.classList.add('sticky') 
-//   else nav.classList.remove('sticky')
-// })
-
-
-// const obsCallback = function(entries, observer){
-//   entries.forEach(entry => console.log(entry))
-// }
-
-// const obsOption = {
-//   root: null,
-//   threshold: [0, 0.2]
-// };
-
-// const observer = new IntersectionObserver(obsCallback, obsOption);
-// observer.observe(section1)
-
 const header = document.querySelector('.header');
 
-const navHeight = nav.getBoundingClientRect().height
+const navHeight = nav.getBoundingClientRect().height;
 
-const stickyNav = function(entries){
+const stickyNav = function (entries) {
   const [entry] = entries;
 
-  if(!entry.isIntersecting) nav.classList.add('sticky')
-  else nav.classList.remove('sticky')
-}
+  if (!entry.isIntersecting) nav.classList.add('sticky');
+  else nav.classList.remove('sticky');
+};
 
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
@@ -177,54 +108,49 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight}px`,
 });
 
-headerObserver.observe(header)
+headerObserver.observe(header);
 /////////////
 
+const allSections = document.querySelectorAll('.section');
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
 
-const allSections = document.querySelectorAll('.section')
-const revealSection = function(entries, observer){
-  const [entry] = entries
-
-  if(!entry.isIntersecting) return
-  entry.target.classList.remove('section--hidden')
-  observer.unobserve(entry.target)
-}
-const sectionObserver = new IntersectionObserver(revealSection,{
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.15
-})
+  threshold: 0.15,
+});
 
-allSections.forEach(function(section){
-  sectionObserver.observe(section)
-  // section.classList.add('section--hidden')
-})
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+});
 
 ////////
 
-const imgTargets = document.querySelectorAll('img[data-src]')
+const imgTargets = document.querySelectorAll('img[data-src]');
 
-const loadImg = function(entries, observer){
-  const [entry] = entries
-  if(!entry.isIntersecting) return
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
 
   entry.target.src = entry.target.dataset.src;
-  entry.target.addEventListener('load', function(){
+  entry.target.addEventListener('load', function () {
     entry.target.classList.remove('lazy-img');
-  })
+  });
 
-  observer.unobserve(entry.target)
-}
+  observer.unobserve(entry.target);
+};
 
 const imgObserver = new IntersectionObserver(loadImg, {
   root: null,
   threshold: 0,
-  rootMargin: '200px'
-})
+  rootMargin: '200px',
+});
 
-imgTargets.forEach(img => imgObserver.observe(img))
-
-
-
+imgTargets.forEach(img => imgObserver.observe(img));
 
 const slider = function () {
   const slides = document.querySelectorAll('.slide');
@@ -308,6 +234,4 @@ const slider = function () {
     }
   });
 };
-slider()
-
-
+slider();
