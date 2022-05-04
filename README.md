@@ -2,4 +2,5 @@
 
 | Проекты    |                               Репозиторий                                |                              Live Demo |
 | ---------- | :----------------------------------------------------------------------: | -------------------------------------: |
-| 1. forkify | [репозиторий](https://github.com/Adelsspace/recipes-study-project-final) | [live demo](recipes-adel.netlify.app/) |
+| 1. forkify | [репозиторий](https://github.com/Adelsspace/recipes-study-project-final) | 
+[live demo](recipes-adel.netlify.app/) |
