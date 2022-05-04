@@ -8,3 +8,11 @@
 | 4. Guess My Number |         [репозиторий](https://github.com/Adelsspace/study-projects/tree/master/guess%20my%20number%20game)          |  [live demo](https://guessmynumber-adel.netlify.app/) |
 | 5. Bankista-DOM    | [репозиторий](https://github.com/Adelsspace/rhttps://github.com/Adelsspace/study-projects/tree/master/bankista-DOM) |   [live demo](https://bankista-dom-adel.netlify.app/) |
 | 6. Bankista-array  |               [репозиторий](https://github.com/Adelsspace/study-projects/tree/master/bankista-array)                | [live demo](https://bankista-array-adel.netlify.app/) |
+| 7. Password Generator |               [репозиторий](https://github.com/Adelsspace/study-projects/tree/master/bankista-array)                | [live demo](https://password-generator-adel.netlify.app/) |
+| 8. Split landing page  |               [репозиторий](https://github.com/Adelsspace/study-projects/tree/master/bankista-array)                | [live demo](https://splitlandingpage-adel.netlify.app) |
+| 9. Form input wave  |               [репозиторий](https://github.com/Adelsspace/study-projects/tree/master/bankista-array)                | [live demo](https://https://forminputwave-adel.netlify.app) |
+| 10. Sound board |               [репозиторий](https://github.com/Adelsspace/study-projects/tree/master/bankista-array)                | [live demo](https://https://sound-board-adel.netlify.app) |
+| 11. Random Choice Picker  |               [репозиторий](https://github.com/Adelsspace/study-projects/tree/master/bankista-array)                | [live demo](https://random-choice-picker-adel.netlify.app/) |
+| 12. Hoverboard |               [репозиторий](https://github.com/Adelsspace/study-projects/tree/master/bankista-array)                | [live demo](https://hoverboard-adel.netlify.app/) |
+
+
